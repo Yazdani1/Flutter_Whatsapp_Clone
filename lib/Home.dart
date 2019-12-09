@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_whatsapp_clone/Pages/Call.dart' as call;
 import 'package:flutter_whatsapp_clone/Pages/Chats.dart' as chat;
 import 'package:flutter_whatsapp_clone/Pages/Contacts.dart' as contacts;
+import 'package:flutter_whatsapp_clone/Pages/Status.dart' as status;
 
 class Home extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 3, vsync: this);
+    controller = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -50,12 +51,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         bottom: TabBar(
           controller: controller,
           indicatorColor: Colors.white,
+          isScrollable: true,
           indicatorWeight: 3.0,
           labelStyle: TextStyle(fontSize: 18.0),
           tabs: <Widget>[
             Tab(text: "CALLS",),
             Tab(text: "CHATS",),
-            Tab(text: "CONTACTS",)
+            Tab(text: "STATUS",),
+            Tab(text: "CONTACTS",),
           ],
         ),
       ),
@@ -64,10 +67,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         children: <Widget>[
           call.Call(),
           chat.Chats(),
+          status.Status(),
           contacts.Contacts()
+
         ],
       ),
-      
+
 
     );
   }
