@@ -23,7 +23,27 @@ class _CallState extends State<Call> {
         child: Column(
           children: <Widget>[
 
-            callData(pic1, "+88 0178956003","April 20, 10.25pm",Icons.call),
+            callData(pic1, "+88 0178956003","April 20, 10.25pm",Icons.videocam),
+            const Divider(
+              color: Colors.black,
+              indent: 100,
+            ),
+            callData(pic2, "+88 0178956003","April 20, 10.25pm",Icons.call),
+            const Divider(
+              color: Colors.black,
+              indent: 100,
+            ),
+            callData(pic3, "+88 0178956003","April 20, 10.25pm",Icons.call),
+            const Divider(
+              color: Colors.black,
+              indent: 100,
+            ),
+            callData(pic4, "+88 0178956003","April 20, 10.25pm",Icons.videocam),
+            const Divider(
+              color: Colors.black,
+              indent: 100,
+            ),
+            callData(pic5, "+88 0178956003","April 20, 10.25pm",Icons.call),
             const Divider(
               color: Colors.black,
               indent: 100,
