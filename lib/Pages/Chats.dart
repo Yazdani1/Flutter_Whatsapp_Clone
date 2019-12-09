@@ -6,6 +6,9 @@ class Chats extends StatefulWidget {
 }
 
 class _ChatsState extends State<Chats> {
+
+  String pic1 = "https://images.pexels.com/photos/247878/pexels-photo-247878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -13,6 +16,9 @@ class _ChatsState extends State<Chats> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            chatData(pic1, "Hello How are you", "Hope you are doing well",
+                "12/09/2019", "6"),
+
           ],
         ),
       ),
@@ -20,9 +26,96 @@ class _ChatsState extends State<Chats> {
     );
   }
 
-  Widget chatData(IconData img, String chatTitle, String chatContent,
+  Widget chatData(String img, String chatTitle, String chatContent,
       String date, String messageCount) {
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      height: 100.0,
+      child: Row(
+        children: <Widget>[
 
+          Expanded(
+              flex: 2,
+              child: new Container(
+                height: 140.0,
+                width: 140.0,
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: new DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(img)
+                    )
+                ),
+              )
+          ),
+          SizedBox(width: 6.0,),
+          Expanded(
+            flex: 4,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  child: Text(chatTitle,
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+
+                Container(
+                  child: Text(chatContent,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 17.0,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+
+              ],
+            ),
+          ),
+          SizedBox(width: 5.0,),
+          Expanded(
+            flex: 2,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  child: Text(date,
+                    maxLines: 1,
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.circle
+                  ),
+                  child: Text(messageCount,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.white
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+        ],
+      ),
+    );
   }
 
 }
