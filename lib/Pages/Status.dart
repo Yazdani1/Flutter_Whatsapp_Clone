@@ -48,7 +48,6 @@ class _StatusState extends State<Status> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-
                             Text("My Status is",
                               style: TextStyle(
                                   fontSize: 20.0,
