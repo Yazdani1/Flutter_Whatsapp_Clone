@@ -19,6 +19,8 @@ class _StatusState extends State<Status> {
   Widget build(BuildContext context) {
     return new Scaffold(
 
+      backgroundColor: Color(0xFFf4f4f4),
+
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,10 +37,10 @@ class _StatusState extends State<Status> {
                         height: 80.0,
                         width: 80.0,
                         decoration: BoxDecoration(
-                          color: Colors.green,
-                          shape: BoxShape.circle
+                            color: Colors.green,
+                            shape: BoxShape.circle
                         ),
-                        child: Icon(Icons.add_a_photo,color: Colors.white,),
+                        child: Icon(Icons.add_a_photo, color: Colors.white,),
                       ),
 
                       SizedBox(width: 6.0,),
@@ -48,11 +50,11 @@ class _StatusState extends State<Status> {
                           children: <Widget>[
 
                             Text("My Status is",
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold
-                            ),
+                              style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold
+                              ),
                             ),
                             SizedBox(height: 5.0,),
                             Text("tap to add your today's status",
@@ -76,17 +78,63 @@ class _StatusState extends State<Status> {
             Container(
               margin: EdgeInsets.all(10.0),
               child: Text("Most recent status",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0
+                ),
               ),
-              ),
-            )
+            ),
+            SizedBox(height: 10.0,),
 
-            statusData(pic1, "Feeling good","Today is a good day for me","12/9/2019"),
-            const Divider(
-              color: Colors.black,
-              indent: 100,
+            Container(
+                child: Card(
+                  child: Column(
+                    children: <Widget>[
+
+                      statusData(
+                          pic1, "Feeling good", "Today is a good day for me",
+                          "12/9/2019"),
+                      const Divider(
+                        color: Colors.black,
+                        indent: 100,
+                      ),
+
+                      statusData(
+                          pic2, "Good morning", "Today is a good day for me",
+                          "1/10/2019"),
+                      const Divider(
+                        color: Colors.black,
+                        indent: 100,
+                      ),
+
+                      statusData(
+                          pic3, "Great day", "Today is a good day for me",
+                          "22/8/2019"),
+                      const Divider(
+                        color: Colors.black,
+                        indent: 100,
+                      ),
+
+                      statusData(
+                          pic4, "Learning new things", "Today is a good day for me",
+                          "20/6/2019"),
+                      const Divider(
+                        color: Colors.black,
+                        indent: 100,
+                      ),
+
+                      statusData(
+                          pic5, "Feeling good", "Today is a good day for me",
+                          "15/4/2019"),
+                      const Divider(
+                        color: Colors.black,
+                        indent: 100,
+                      ),
+
+
+                    ],
+                  ),
+                )
             ),
           ],
         ),
@@ -96,7 +144,7 @@ class _StatusState extends State<Status> {
     );
   }
 
-  Widget statusData(String img, String title, String description,String date) {
+  Widget statusData(String img, String title, String description, String date) {
     return Container(
       margin: EdgeInsets.all(10.0),
       height: 100.0,
