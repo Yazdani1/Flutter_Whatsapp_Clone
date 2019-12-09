@@ -42,7 +42,6 @@ class _StatusState extends State<Status> {
                         ),
                         child: Icon(Icons.add_a_photo, color: Colors.white,),
                       ),
-
                       SizedBox(width: 6.0,),
                       Container(
                         child: Column(
