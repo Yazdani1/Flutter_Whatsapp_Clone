@@ -85,14 +85,16 @@ class _CallState extends State<Call> {
                 ),
               )
           ),
+          
           SizedBox(width: 6.0,),
+
           Expanded(
             flex: 4,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                
+
                 Container(
                   child: Text(phoneNumber,
                     style: TextStyle(
