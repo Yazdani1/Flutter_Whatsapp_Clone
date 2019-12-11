@@ -54,7 +54,7 @@ class _CallState extends State<Call> {
       ),
 
 
-      
+
       floatingActionButton: FloatingActionButton(
           onPressed: (){},
           child: Icon(Icons.call),
@@ -70,7 +70,6 @@ class _CallState extends State<Call> {
       height: 100.0,
       child: Row(
         children: <Widget>[
-
           Expanded(
               flex: 2,
               child: new Container(
@@ -93,6 +92,7 @@ class _CallState extends State<Call> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                
                 Container(
                   child: Text(phoneNumber,
                     style: TextStyle(
@@ -102,6 +102,8 @@ class _CallState extends State<Call> {
                     ),
                   ),
                 ),
+
+
                 SizedBox(height: 5.0,),
 
                 Container(
@@ -117,7 +119,9 @@ class _CallState extends State<Call> {
               ],
             ),
           ),
-          SizedBox(width: 5.0,),
+
+          SizedBox(width: 6.0,),
+
           Expanded(
             flex: 1,
             child: Column(
@@ -135,7 +139,6 @@ class _CallState extends State<Call> {
       ),
     );
   }
-
 }
 
 
