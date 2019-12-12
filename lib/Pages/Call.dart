@@ -17,8 +17,6 @@ class _CallState extends State<Call> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -62,7 +60,6 @@ class _CallState extends State<Call> {
       ),
     );
   }
-
   Widget callData(String img, String phoneNumber, String date,
       IconData icon,) {
     return Container(
@@ -85,7 +82,7 @@ class _CallState extends State<Call> {
                 ),
               )
           ),
-          
+
           SizedBox(width: 6.0,),
 
           Expanded(
