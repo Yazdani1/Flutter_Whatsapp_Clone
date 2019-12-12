@@ -60,6 +60,9 @@ class _CallState extends State<Call> {
       ),
     );
   }
+
+
+  
   Widget callData(String img, String phoneNumber, String date,
       IconData icon,) {
     return Container(
