@@ -91,7 +91,6 @@ class _CallState extends State<Call> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-
                 Container(
                   child: Text(phoneNumber,
                     style: TextStyle(
@@ -101,10 +100,7 @@ class _CallState extends State<Call> {
                     ),
                   ),
                 ),
-
-
                 SizedBox(height: 5.0,),
-
                 Container(
                   child: Text(date,
                     maxLines: 1,
